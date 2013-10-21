@@ -41,6 +41,7 @@
     <Compile Include="CreerClient.cs" />
     <Compile Include="GénérerDesRéservations.cs" />
     <Compile Include="VérifierTotauxPourRéservation.cs" />
+    <Compile Include="CalculTaxes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
