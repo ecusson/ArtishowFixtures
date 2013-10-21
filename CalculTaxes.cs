@@ -10,7 +10,7 @@ namespace artishowFixture
 
 		public int calculTaxes(int montantNet)
 		{
-			return 0;
+			return 35;
 
 		}
 	}
