@@ -4,7 +4,7 @@ namespace artishowFixture
 {
 	public class CalculTaxes
 	{
-		public CalculTaxes (int TpsTaux, int TvqTaux)
+		public CalculTaxes (string  TpsTaux, string TvqTaux)
 		{
 		}
 
