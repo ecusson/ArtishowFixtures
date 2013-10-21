@@ -11,7 +11,7 @@ namespace artishowFixture
 		{
 		}
 
-		public void calculTaxes(int montantNet)
+		public void CalculerTaxesPour(string montantNet)
 		{
 		
 			_tps = "50";
