@@ -4,15 +4,29 @@ namespace artishowFixture
 {
 	public class CalculTaxes
 	{
+		string _tps;
+		string _tvq;
+
 		public CalculTaxes (string  TpsTaux, string TvqTaux)
 		{
 		}
 
-		public int calculTaxes(int montantNet)
+		public void calculTaxes(int montantNet)
 		{
-			return 35;
-
+		
+			_tps = "50";
 		}
+
+		public string tps()
+		{
+			return _tps;
+		}
+
+		public string tvq()
+		{
+			return _tvq;
+		}
+
 	}
 }
 
