@@ -39,9 +39,9 @@
     <Compile Include="ReservationValide.cs" />
     <Compile Include="ajouterRepresentation.cs" />
     <Compile Include="CreerClient.cs" />
-    <Compile Include="VérifierTotauxPourRéservation.cs" />
     <Compile Include="CalculTaxes.cs" />
-    <Compile Include="GénérerDesRéservations.cs" />
+    <Compile Include="GenererDesReservations.cs" />
+    <Compile Include="VerifierTotauxPourReservations.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
