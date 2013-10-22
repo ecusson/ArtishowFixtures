@@ -20,7 +20,7 @@ namespace artishowFixture
 
 		public void AjouterClient(string client)
 		{
-
+			//test
 		}
 
 		public void AjouterSiegeAuPrixDe(string siege, string prix)
