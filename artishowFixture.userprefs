@@ -1,16 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTaxes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VérifierTotauxPourRéservation.cs">
     <Files>
-      <File FileName="ajouterRepresentation.cs" Line="1" Column="1" />
-      <File FileName="CalculTaxes.cs" Line="1" Column="1" />
+      <File FileName="GénérerDesRéservations.cs" Line="23" Column="4" />
+      <File FileName="VérifierTotauxPourRéservation.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="artishowFixture" expanded="True">
-            <Node name="CalculTaxes.cs" selected="True" />
+            <Node name="GénérerDesRéservations.cs" selected="True" />
           </Node>
         </State>
       </Pad>
