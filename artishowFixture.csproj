@@ -42,6 +42,10 @@
     <Compile Include="CalculTaxes.cs" />
     <Compile Include="GenererDesReservations.cs" />
     <Compile Include="VerifierTotauxPourReservations.cs" />
+    <Compile Include="ExtraireTaxes.cs" />
+    <Compile Include="VerrouillerBilletInventaire.cs" />
+    <Compile Include="RetirerBilletInventaire.cs" />
+    <Compile Include="CreerVersement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

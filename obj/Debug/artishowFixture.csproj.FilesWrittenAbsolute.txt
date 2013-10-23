@@ -2,3 +2,7 @@
 /Users/mabehec/Documents/Feria/ArtishowFixtures/bin/Debug/artishowFixture.dll
 /Users/mabehec/Documents/Feria/ArtishowFixtures/obj/Debug/artishowFixture.dll
 /Users/mabehec/Documents/Feria/ArtishowFixtures/obj/Debug/artishowFixture.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/obj/Debug/artishowFixture.dll
+/Users/mabehec/Documents/ArtishowFixtures/obj/Debug/artishowFixture.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/bin/Debug/artishowFixture.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/bin/Debug/artishowFixture.dll
