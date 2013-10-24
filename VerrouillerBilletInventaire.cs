@@ -21,10 +21,7 @@ namespace artishowFixture
 		{
 
 		}
-		public void deverrouillerBillet(string siege)
-		{
 
-		}
 
 
 

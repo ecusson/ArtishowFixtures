@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="BilletterieModel">
-      <HintPath>..\..\Desktop\billetteriemodel.dll</HintPath>
+      <HintPath>bin\Debug\billetteriemodel.dll</HintPath>
     </Reference>
     <Reference Include="SharpRepository.Repository">
       <HintPath>..\..\Desktop\sharprepository.repository.dll</HintPath>
@@ -57,6 +57,7 @@
     <Compile Include="PaiementMultipleReservation.cs" />
     <Compile Include="PayerPlusieursReservations.cs" />
     <Compile Include="CreerCompteClient.cs" />
+    <Compile Include="AjouterFraisServiceSurBillet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
