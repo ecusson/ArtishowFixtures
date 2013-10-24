@@ -1,19 +1,23 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTaxes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CreerCompteClient.cs">
     <Files>
-      <File FileName="GenererDesReservations.cs" Line="1" Column="1" />
+      <File FileName="ExtraireTaxes.cs" Line="1" Column="1" />
       <File FileName="VerifierTotauxPourReservations.cs" Line="1" Column="1" />
-      <File FileName="CalculTaxes.cs" Line="27" Column="4" />
-      <File FileName="CreerClient.cs" Line="1" Column="1" />
+      <File FileName="VerrouillerBilletInventaire.cs" Line="1" Column="1" />
+      <File FileName="RetirerBilletInventaire.cs" Line="1" Column="1" />
+      <File FileName="CreerVersement.cs" Line="1" Column="1" />
+      <File FileName="PaiementMultipleReservation.cs" Line="1" Column="1" />
+      <File FileName="PayerPlusieursReservations.cs" Line="1" Column="1" />
+      <File FileName="PayerReservation.cs" Line="1" Column="1" />
+      <File FileName="ReserverBillet.cs" Line="1" Column="1" />
+      <File FileName="CreerCompteClient.cs" Line="13" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="artishowFixture" expanded="True">
-            <Node name="CalculTaxes.cs" selected="True" />
-          </Node>
+          <Node name="artishowFixture" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

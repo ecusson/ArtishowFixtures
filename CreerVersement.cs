@@ -18,7 +18,7 @@ namespace artishowFixture
 
 		}
 
-		public string CompteClientDeSolde(string nomClient, string solde)
+		public string CompteClientDeSolde(string nomClient)
 		{
 			return string.Empty;
 		}
