@@ -1,4 +1,7 @@
 using System;
+using Billetterie.Model.Common;
+
+
 
 namespace artishowFixture
 {
@@ -17,10 +20,9 @@ namespace artishowFixture
 
 		public void CalculerTaxesPour(string montantNet)
 		{
-		
-			_tps = Convert.ToString(Convert.ToDecimal(montantNet)*Convert.ToDecimal(_tpsTaux));
-			_tvq = Convert.ToString(Convert.ToDecimal(montantNet) *Convert.ToDecimal( _tvqTaux));
+
 		}
+
 
 		public string tps()
 		{

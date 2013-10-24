@@ -1,9 +1,17 @@
 using System;
+using Billetterie.Model.Common;
+using Billetterie.Model.Inventory;
+using SharpRepository.Repository;
+
 
 namespace artishowFixture
 {
 	public class RetirerBilletInventaire
 	{
+		SharpRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository<SeatInventoryItem,String>();
+
+
+
 		public RetirerBilletInventaire ()
 		{
 		}
