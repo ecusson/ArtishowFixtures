@@ -8,20 +8,20 @@ namespace artishowFixture
 		{
 		}
 
-		public void CreerReservationAuNomDeAvecTotalDe(string noReservation, string nomClient, string total)
+		public void CreerReservationAuNomDeAvecTotalDe(string noReservation, string nomClient, decimal total)
 		{
 
 		} 
-		public void CreerCompteDeAvecSoldeDe(string nomClient, string solde)
+		public void CreerCompteDeAvecSoldeDe(string nomClient, decimal solde)
 		{
 
 		}
-		public void SoustrairePaiementDeDuCompteClientDe(string montantPaiement, string nomClient)
+		public void SoustrairePaiementDeDuCompteClientDe(decimal montantPaiement, string nomClient)
 		{
 
 		}
 
-		public void AjouterPaiementDeDansReservation(string montantPaiement, string noReservation)
+		public void AjouterPaiementDeDansReservation(decimal montantPaiement, string noReservation)
 		{
 
 		}

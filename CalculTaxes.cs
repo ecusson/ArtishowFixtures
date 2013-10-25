@@ -7,31 +7,40 @@ namespace artishowFixture
 {
 	public class CalculTaxes
 	{
-		string _tpsTaux;
-		string _tvqTaux;
-		string _tps;
-		string _tvq;
+		decimal _tpsTaux;
+		decimal _tvqTaux;
+		decimal _tps;
+		decimal _tvq;
+		decimal _montantBrut;
 
-		public CalculTaxes (string  TpsTaux, string TvqTaux)
+		public CalculTaxes (decimal  TpsTaux, decimal TvqTaux)
 		{
 			this._tpsTaux = TpsTaux;
 			this._tvqTaux = TvqTaux;
 		}
 
-		public void CalculerTaxesPour(string montantNet)
+		public void CalculerTaxesPour(decimal montantNet)
 		{
+			_tps = Math.Round(montantNet * _tpsTaux,2);
+			_tvq = Math.Round(montantNet * _tvqTaux,2);
+			_montantBrut = montantNet + _tps + _tvq;
 
 		}
 
 
-		public string tps()
+		public decimal tps()
 		{
 			return _tps;
 		}
 
-		public string tvq()
+		public decimal tvq()
 		{
 			return _tvq;
+		}
+
+		public decimal montantbrut()
+		{
+			return _montantBrut;
 		}
 
 	}

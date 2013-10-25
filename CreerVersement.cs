@@ -8,19 +8,19 @@ namespace artishowFixture
 		{
 		}
 
-		public void creerCompteDeAvecSoldeDe(string nomClient, string solde)
+		public void creerCompteDeAvecSoldeDe(string nomClient, decimal solde)
 		{
 
 		}
 
-		public void creerVersementDeAuCompteClientDe(string versement, string nomClient)
+		public void creerVersementDeAuCompteClientDe(decimal versement, string nomClient)
 		{
 
 		}
 
-		public string CompteClientDeSolde(string nomClient)
+		public decimal CompteClientDeSolde(string nomClient)
 		{
-			return string.Empty;
+			return 0;
 		}
 
 	}

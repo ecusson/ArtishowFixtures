@@ -7,7 +7,7 @@ namespace artishowFixture
 		public VerifierTotauxPourRéservation ()
 		{
 		}
-		public void DéfinirLesTauxDeTaxesAvecTPSEtTVQ(string tps,string TVQ)
+		public void DéfinirLesTauxDeTaxesAvecTPSEtTVQ(decimal tps,decimal TVQ)
 		{
 
 		}
@@ -18,112 +18,112 @@ namespace artishowFixture
 		public void AjouterClient(string any)
 		{
 		}
-         public void AjouterSiegesAuPrixBrutDeEtAvecRabaisDePourLaCatégorie(string nombre,string prix, string rabais, string catégorie)
+         public void AjouterSiegesAuPrixBrutDeEtAvecRabaisDePourLaCatégorie(decimal nombre,decimal prix, decimal rabais, string categorie)
 		{
 		}
-		public void AjouterSiegesAuPrixBrutDePourLaCatégorie(string nombre,string prix, string catégorie)
+		public void AjouterSiegesAuPrixBrutDePourLaCatégorie(decimal nombre,decimal prix, string categorie)
 		{
 		}
 
-		public void AjouterFraisAuPrixBrutDeTypeDeFrais(string nombre, string prix, string type)
+		public void AjouterFraisAuPrixBrutDeTypeDeFrais(decimal nombre, decimal prix, string type)
 		{
 
 		}
 
-		public string RecettesNettesBillets()
+		public decimal RecettesNettesBillets()
 		{
-			return String.Empty;
+			return 0.00;
 		}
 
-		public string RecettesBrutesBillets()
+		public decimal RecettesBrutesBillets()
 		{
-			return String.Empty;
+			return 0.00;
 		}
 
-		public string TPSBillets()
+		public decimal TPSBillets()
 		{
-			return String.Empty;
+			return 0.00;
 		}	
 
-		public string TVQBillets()
+		public decimal TVQBillets()
 		{
-			return String.Empty;
+			return 0.00;
 		}
 
-		public string RecettesNettesAbonnes()
+		public decimal RecettesNettesAbonnes()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesBrutesAbonnes()
+		public decimal RecettesBrutesAbonnes()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TPSAbonnes()
+		public decimal TPSAbonnes()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TVQAbonnes()
+		public decimal TVQAbonnes()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesNettesReg()
+		public decimal RecettesNettesReg()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesBrutesReg()
+		public decimal RecettesBrutesReg()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TPSReg()
+		public decimal TPSReg()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TVQReg()
+		public decimal TVQReg()
 		{
-			return String.Empty;
-		}
-
-		public string RecettesBrutesGratuit()
-		{
-			return String.Empty;
+			return 0.00;
 		}
 
-		public string RecettesBrutesBancMort()
+		public decimal RecettesBrutesGratuit()
 		{
-			return String.Empty;
+			return 0.00;
 		}
 
-		public string RecettesNettesFraisService()
+		public decimal RecettesBrutesBancMort()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesBrutesFraisService()
+
+		public decimal RecettesNettesFraisService()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TPSFraisService()
+		public decimal RecettesBrutesFraisService()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TVQFraisService()
+		public decimal TPSFraisService()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesNettesFraisPoste()
+		public decimal TVQFraisService()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string RecettesBrutesFraisPoste()
+		public decimal RecettesNettesFraisPoste()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TPSFraisPoste()
+		public decimal RecettesBrutesFraisPoste()
 		{
-			return String.Empty;
+			return 0.00;
 		}
-		public string TVQFraisPoste()
+		public decimal TPSFraisPoste()
 		{
-			return String.Empty;
+			return 0.00;
+		}
+		public decimal TVQFraisPoste()
+		{
+			return 0.00;
 		}
 
 	}

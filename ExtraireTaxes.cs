@@ -6,44 +6,44 @@ namespace artishowFixture
 {
 	public class ExtraireTaxes
 	{
-		string _tpsTaux;
-		string _tvqTaux;
-		string _tps;
-		string _tvq;
-		string _net;
+		decimal _tpsTaux;
+		decimal _tvqTaux;
+		decimal _tps;
+		decimal _tvq;
+		decimal _net;
 
 
 
-		public ExtraireTaxes (string TpsTaux, string TvqTaux)
+		public ExtraireTaxes (decimal TpsTaux, decimal TvqTaux)
 		{
 		
 			this._tpsTaux = TpsTaux;
 			this._tvqTaux = TvqTaux;
 		}
 
-		public void ExtraireTaxesPour(string montantBrut)
+		public void ExtraireTaxesPour(decimal montantBrut)
 		{
 			
 			var processor = new Billetterie.Model.Common.NetTotalCalculationStrategy (new Billetterie.Model.Common.Rate[] {
-				new Billetterie.Model.Common.Rate ("tps", Decimal.Parse (_tpsTaux)), new Billetterie.Model.Common.Rate ("tvq", Decimal.Parse (_tvqTaux))
+				new Billetterie.Model.Common.Rate ("tps", _tpsTaux), new Billetterie.Model.Common.Rate ("tvq", _tvqTaux)
 			});
-			var total= processor.Process (new PriceTag(Decimal.Parse (montantBrut)));
-			_tps = total.Taxes [0].Amount.ToString ();
-			_tvq = total.Taxes [1].Amount.ToString ();
-			_net = total.NetTotal.ToString ();
+			var total= processor.Process (new PriceTag(montantBrut));
+			_tps = total.Taxes [0].Amount;
+			_tvq = total.Taxes [1].Amount;
+			_net = total.NetTotal;
 
 		}
 
-		public string tps()
+		public decimal tps()
 		{
 			return _tps;
 		}
 
-		public string tvq()
+		public decimal tvq()
 		{
 			return _tvq;
 		}
-		public string net()
+		public decimal net()
 		{
 			return _net;
 		}

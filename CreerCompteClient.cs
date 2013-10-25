@@ -8,7 +8,7 @@ namespace artishowFixture
 		{
 		}
 		
-		public bool CreerCompteDeAvecSoldeDe(string NomClient, string Solde)
+		public bool CreerCompteDeAvecSoldeDe(string NomClient, decimal Solde)
 		{
 			return false;
 		}

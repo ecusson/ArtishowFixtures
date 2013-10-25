@@ -8,22 +8,22 @@ namespace artishowFixture
 		{
 		}
 		
-		public void CreerReservationSolde(string nom, int solde)
+		public void CreerReservationSolde(string nom, decimal solde)
 		{
 			
 		}
-		public void CreerCompteClientWithSolde(string compte, int solde)
+		public void CreerCompteClientWithSolde(string compte, decimal solde)
 		{
 			
 		}
-		public void AjouterPaiementFromCompteClientTo(int paiement, string compte, string reservation){
+		public void AjouterPaiementFromCompteClientTo(decimal paiement, string compte, string reservation){
 			
 		}
-		public int SoldeReservation (string reservation){
-			return 99999;
+		public decimal SoldeReservation (string reservation){
+			return 99999.00;
 		}
-		public int SoldeCompteClient(string compte){
-			return 999454;
+		public decimal SoldeCompteClient(string compte){
+			return 999454.00;
 		}
 	}
 }

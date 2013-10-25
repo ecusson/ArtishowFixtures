@@ -2,18 +2,18 @@ using System;
 
 namespace artishowFixture
 {
-	public class GénérerDesRéservations
+	public class GenererDesReservations
 	{
-		public GénérerDesRéservations ()
+		public GenererDesReservations ()
 		{
 		}
 
-		public void CréerRéservation(string réservation)
+		public void CreerRéservation(string reservation)
 		{
 
 		}
 
-		public void AjouterReprésentation(string spectacle)
+		public void AjouterRepresentation(string spectacle)
 		{
 
 		}
@@ -23,15 +23,15 @@ namespace artishowFixture
 			//test
 		}
 
-		public void AjouterSiegeAuPrixDe(string siege, string prix)
+		public void AjouterSiegeAuPrixDe(string siege, decimal prix)
 		{
 
 		}
-		public void AjouterFraisAuMontantDe(string nomFrais, string prix)
+		public void AjouterFraisAuMontantDe(string nomFrais, decimal prix)
 		{
 
 		}
-		public void AjouterItemAuPrixDe(string item, string prix)
+		public void AjouterItemAuPrixDe(string item, decimal prix)
 		{
 
 		}
