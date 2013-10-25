@@ -20,10 +20,10 @@ namespace artishowFixture
 			
 		}
 		public decimal SoldeReservation (string reservation){
-			return 99999.00;
+			return 99999.00m;
 		}
 		public decimal SoldeCompteClient(string compte){
-			return 999454.00;
+			return 999454.00m;
 		}
 	}
 }

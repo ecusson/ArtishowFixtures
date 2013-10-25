@@ -32,98 +32,98 @@ namespace artishowFixture
 
 		public decimal RecettesNettesBillets()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal RecettesBrutesBillets()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal TPSBillets()
 		{
-			return 0.00;
+			return 0.00m;
 		}	
 
 		public decimal TVQBillets()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal RecettesNettesAbonnes()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesBrutesAbonnes()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TPSAbonnes()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TVQAbonnes()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesNettesReg()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesBrutesReg()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TPSReg()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TVQReg()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal RecettesBrutesGratuit()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal RecettesBrutesBancMort()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 		public decimal RecettesNettesFraisService()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesBrutesFraisService()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TPSFraisService()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TVQFraisService()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesNettesFraisPoste()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal RecettesBrutesFraisPoste()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TPSFraisPoste()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 		public decimal TVQFraisPoste()
 		{
-			return 0.00;
+			return 0.00m;
 		}
 
 	}
