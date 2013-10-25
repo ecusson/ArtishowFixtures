@@ -20,7 +20,7 @@ namespace artishowFixture
 
 		public decimal CompteClientDeSolde(string nomClient)
 		{
-			return 0;
+			return 0.00m;
 		}
 
 	}

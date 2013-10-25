@@ -37,7 +37,7 @@ namespace artishowFixture
 
 		public decimal TotalTransaction(string noTransaction)
 		{
-			return 255m;
+			return 0.00m;
 		}
 	}
 	}

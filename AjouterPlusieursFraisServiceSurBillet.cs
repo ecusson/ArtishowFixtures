@@ -15,8 +15,7 @@ namespace artishowFixture
 		SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string>();
 		SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		IInventoryControlService inventoryservices;
-		decimal _prix;
-		decimal _frais;
+
 
 		public AjouterPlusieursFraisServiceSurBillet ()
 
@@ -34,8 +33,7 @@ namespace artishowFixture
 
 		public void AjouterBilletAuPrixDeAvecFraisDeServiceDe(string siege, decimal prix, decimal frais) 
 		{
-			_prix = prix;
-			_frais = frais;
+
 		}
 
 		public void  AjouterFraisDeSurBilletDeReservation(decimal frais, string siege, string noReservation)
@@ -45,17 +43,17 @@ namespace artishowFixture
 
 		public decimal totalReservation()
 		{
-			return (_prix+_frais)*2;
+			return 0.00m;
 		}
 
 		public decimal totalFrais()
 		{
-			return _frais*2;
+			return 0.00m;
 		}
 
 		public decimal totalBillets()
 		{
-			return _prix*2;
+			return 0.00m;
 		}
 	}
 }
