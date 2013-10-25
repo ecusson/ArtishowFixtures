@@ -22,12 +22,12 @@ namespace artishowFixture
 			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),10000);
 		}
 
-		public bool ReserverBilletPourClient(string siege, string nomClient)
+		public void ReserverBilletPourClient(string siege, string nomClient)
 		{
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
 			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
 			new Show (), new Customer (nomClient));
-			return true;
+			//comment faire passer le ensure????
 
 		}
 
