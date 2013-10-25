@@ -58,6 +58,8 @@
     <Compile Include="PayerPlusieursReservations.cs" />
     <Compile Include="CreerCompteClient.cs" />
     <Compile Include="AjouterFraisServiceSurBillet.cs" />
+    <Compile Include="AjouterFraisServiceSurReservation.cs" />
+    <Compile Include="AjouterFraisServiceSurTransaction.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
