@@ -60,6 +60,7 @@
     <Compile Include="AjouterFraisServiceSurBillet.cs" />
     <Compile Include="AjouterFraisServiceSurReservation.cs" />
     <Compile Include="AjouterFraisServiceSurTransaction.cs" />
+    <Compile Include="AnnulerBilletRetourDansInventaire.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
