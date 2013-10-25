@@ -66,6 +66,9 @@
     <Compile Include="AjouterPlusieursFraisServiceSurTransaction.cs" />
     <Compile Include="ExtraireNouvelleStrategieTaxes.cs" />
     <Compile Include="AjouterPlusieursSiegesDansReservation.cs" />
+    <Compile Include="ReserverDifferentsBilletsDansRepresentation.cs" />
+    <Compile Include="UneRepresentationParReservation.cs" />
+    <Compile Include="ReservationFixtureBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
