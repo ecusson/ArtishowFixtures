@@ -8,7 +8,7 @@ namespace artishowFixture
 		{
 		}
 
-		public void CreerRéservation(string reservation)
+		public void CreerReservation(string reservation)
 		{
 
 		}

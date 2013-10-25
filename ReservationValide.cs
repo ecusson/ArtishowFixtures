@@ -5,31 +5,31 @@ namespace artishowFixture
 	public class ReservationValide
 	{
 		private int nbsieges;
-  		private bool frais;
-  		private bool marchandise;
-		private bool client;
+  		private int frais;
+  		private int marchandise;
+		private int client;
 		
 		public void reservationValide()
 		{
-			
+
 		}
 		
 		public void setNombreDeSieges(int nbsieges)
 		{
 			this.nbsieges=nbsieges;
 		}
-		
-		public void setfrais(Boolean frais)
+
+		public void setfrais(int frais)
 		{
 			this.frais=frais;
 		}
 		
-		public void setmarchandise(Boolean marchandise)
+		public void setmarchandise(int marchandise)
 		{
 			this.marchandise = marchandise;
 		}
 		
-		public void setClient (Boolean client)
+		public void setClient (int client)
 		{
 			this.client=client;
 		}
@@ -37,14 +37,14 @@ namespace artishowFixture
 		public string valide()
 		{
 
-			if (client&&(frais||marchandise||nbsieges>0))
+			if (client>0&&(frais>0||marchandise>0||nbsieges>0))
 			{
-				 return "Y";	
+				 return "1";	
 				
 			}
 			else
 			{
-				return "N";
+				return "0";
 			}
 				 
 		}

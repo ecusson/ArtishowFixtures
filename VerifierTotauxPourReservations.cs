@@ -18,10 +18,10 @@ namespace artishowFixture
 		public void AjouterClient(string any)
 		{
 		}
-         public void AjouterSiegesAuPrixBrutDeEtAvecRabaisDePourLaCatégorie(decimal nombre,decimal prix, decimal rabais, string categorie)
+         public void AjouterSiegesAuPrixBrutDeEtAvecRabaisDePourLaCategorie(decimal nombre,decimal prix, decimal rabais, string categorie)
 		{
 		}
-		public void AjouterSiegesAuPrixBrutDePourLaCatégorie(decimal nombre,decimal prix, string categorie)
+		public void AjouterSiegesAuPrixBrutDePourLaCategorie(decimal nombre,decimal prix, string categorie)
 		{
 		}
 
