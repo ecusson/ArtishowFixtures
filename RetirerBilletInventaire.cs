@@ -25,11 +25,10 @@ namespace artishowFixture
 
 		public void confirmerbilletPourClient(string siege, string nomClient)
 		{
-			CreateNewOrAddToReservation (siege, nomClient, "Anyspectacle", "AnyNoReservation");
 
-			/*var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
 			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
-			new Show (), new Customer (client));*/
+			new Show (), new Customer (nomClient));
 
 
 		}
