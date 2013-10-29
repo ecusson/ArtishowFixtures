@@ -1,11 +1,14 @@
 using System;
-using Billetterie.Model.Inventory;
-using Billetterie.Model.Reservations;
-using Billetterie.Model.Inventory.Services;
-using System.Collections.Generic;
 using Billetterie.Model.Common;
-using Billetterie.Model.Reservations.Services;
 using Billetterie.Model.Common.Services;
+using Billetterie.Model.Inventory;
+using Billetterie.Model.Inventory.Services;
+using SharpRepository.Repository;
+using Billetterie.Model.Reservations.Services;
+using Billetterie.Model.Reservations;
+using System.Collections.Generic;
+
+
 
 namespace artishowFixture
 {

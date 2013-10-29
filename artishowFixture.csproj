@@ -73,6 +73,7 @@
     <Compile Include="EnleverBilletDansReservation.cs" />
     <Compile Include="EnleverEtAjouterBilletDansReservation.cs" />
     <Compile Include="AnnuletBilletsDansReservation.cs" />
+    <Compile Include="DefinirBancsMorts.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
