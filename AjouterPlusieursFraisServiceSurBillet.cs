@@ -9,25 +9,22 @@ using Billetterie.Model.Reservations;
 
 namespace artishowFixture
 {
-	public class AjouterPlusieursFraisServiceSurBillet
+	public class AjouterPlusieursFraisServiceSurBillet : ReservationFixtureBase
 	{
-		SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
-		IInventoryControlService inventoryservices;
 
-
-		public AjouterPlusieursFraisServiceSurBillet ()
+		public AjouterPlusieursFraisServiceSurBillet () :base()
 
 		{
-			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),10000);
+
 		}
 
 		public void CreerReservationAuNomDe(string noReservation, string nomClient)
 		{
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
-			new Show (), new Customer (nomClient));
+//			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+//			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
+//			new Show (), new Customer (nomClient));
+
+			CreateNewOrAddToReservation ("anysiege", nomClient, "anySpectacle", noReservation);
 
 		}
 

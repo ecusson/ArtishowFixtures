@@ -9,16 +9,11 @@ using Billetterie.Model.Reservations;
 
 namespace artishowFixture
 {
-	public class AjouterPlusieursFraisServiceSurReservation
+	public class AjouterPlusieursFraisServiceSurReservation : ReservationFixtureBase
 	{
-		SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
-		IInventoryControlService inventoryservices;
 
-		public AjouterPlusieursFraisServiceSurReservation ()
+		public AjouterPlusieursFraisServiceSurReservation () :base()
 		{
-			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),10000);
 		}
 
 		public void CreerReservationAuNomDeAvecTotalDe(string noReservation, string nomClient, decimal total)

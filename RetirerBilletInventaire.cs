@@ -10,18 +10,12 @@ using Billetterie.Model.Reservations;
 
 namespace artishowFixture
 {
-	public class RetirerBilletInventaire
+	public class RetirerBilletInventaire : ReservationFixtureBase
 	{
-		SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string>();
-		SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
-		IInventoryControlService inventoryservices;
 
 
-		public RetirerBilletInventaire ()
+		public RetirerBilletInventaire ():base()
 		{
-			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),10000);
-
 		}
 
 		public void GenererInventaire(string siege)
@@ -29,11 +23,14 @@ namespace artishowFixture
 			inventory.Add (new SeatInventoryItem (new Billetterie.Model.Common.Seat (siege), new Show ()));
 		}
 
-		public void confirmerbilletPourClient(string siege, string client)
+		public void confirmerbilletPourClient(string siege, string nomClient)
 		{
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+			CreateNewOrAddToReservation (siege, nomClient, "Anyspectacle", "AnyNoReservation");
+
+			/*var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
 			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
-			new Show (), new Customer (client));
+			new Show (), new Customer (client));*/
+
 
 		}
 

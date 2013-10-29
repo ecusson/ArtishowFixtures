@@ -8,7 +8,7 @@ namespace artishowFixture
 		{
 		
 		}
-		public void AjouterUneReprésentation (string représentation)
+		public void AjouterUneReprésentation (string representation)
 		{
 
 		}

@@ -69,6 +69,10 @@
     <Compile Include="ReserverDifferentsBilletsDansRepresentation.cs" />
     <Compile Include="UneRepresentationParReservation.cs" />
     <Compile Include="ReservationFixtureBase.cs" />
+    <Compile Include="AjouterBilletDansReservation.cs" />
+    <Compile Include="EnleverBilletDansReservation.cs" />
+    <Compile Include="EnleverEtAjouterBilletDansReservation.cs" />
+    <Compile Include="AnnuletBilletsDansReservation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

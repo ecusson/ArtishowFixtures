@@ -36,6 +36,7 @@ namespace artishowFixture
 		protected	void CreateNewOrAddToReservation (string siege, string nomClient, string spectacle, string NoReservation)
 		{
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+
 			if (!currentReservations.ContainsKey (nomClient)) {
 				currentReservations.Add (nomClient, serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] {
 					new Billetterie.Model.Common.Seat (siege)
