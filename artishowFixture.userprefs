@@ -1,23 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CreerCompteClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DefinirBancsMorts.cs">
     <Files>
-      <File FileName="ExtraireTaxes.cs" Line="1" Column="1" />
-      <File FileName="VerifierTotauxPourReservations.cs" Line="1" Column="1" />
-      <File FileName="VerrouillerBilletInventaire.cs" Line="1" Column="1" />
-      <File FileName="RetirerBilletInventaire.cs" Line="1" Column="1" />
-      <File FileName="CreerVersement.cs" Line="1" Column="1" />
-      <File FileName="PaiementMultipleReservation.cs" Line="1" Column="1" />
-      <File FileName="PayerPlusieursReservations.cs" Line="1" Column="1" />
-      <File FileName="PayerReservation.cs" Line="1" Column="1" />
-      <File FileName="ReserverBillet.cs" Line="1" Column="1" />
-      <File FileName="CreerCompteClient.cs" Line="13" Column="17" />
+      <File FileName="EnleverBilletDansReservation.cs" Line="1" Column="1" />
+      <File FileName="AnnuletBilletsDansReservation.cs" Line="41" Column="53" />
+      <File FileName="AjouterPlusieursSiegesDansReservation.cs" Line="69" Column="18" />
+      <File FileName="ReservationFixtureBase.cs" Line="11" Column="1" />
+      <File FileName="DefinirBancsMorts.cs" Line="36" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="artishowFixture" expanded="True" selected="True" />
+          <Node name="artishowFixture" expanded="True">
+            <Node name="DefinirBancsMorts.cs" selected="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
