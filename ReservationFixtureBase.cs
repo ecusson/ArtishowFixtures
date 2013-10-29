@@ -16,10 +16,10 @@ namespace artishowFixture
 	{
 
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
-		protected SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Reservation,string>();
+		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservation,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		protected IInventoryControlService inventoryservices;
-		protected Dictionary<string,ReservationId> currentReservations = new Dictionary<string, ReservationId>();
+		protected Dictionary<string,ReservationNumber> currentReservations = new Dictionary<string, ReservationNumber>();
 		protected DateTime SHOW_DATE=DateTime.Now;
 
 		public ReservationFixtureBase ()
@@ -36,17 +36,18 @@ namespace artishowFixture
 			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),timeout);
 		}
 
-		protected	void CreateNewOrAddToReservation (string siege, string nomClient, string spectacle, string NoReservation)
+		protected	void CreateNewOrAddToReservation (string siege, string nomClient, string spectacle, ReservationNumber NoReservation)
 		{
+		
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
 
-			if (!currentReservations.ContainsKey (nomClient)) {
-				currentReservations.Add (nomClient, serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] {
+			if (!currentReservations.ContainsKey (spectacle)) {
+				currentReservations.Add (spectacle, serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] {
 					new Billetterie.Model.Common.Seat (siege)
 				}, new Show (new Venue (spectacle), SHOW_DATE), new Customer (nomClient)));
 			}
 			else {
-				serviceDeReservation.AddSeatsToReservation (currentReservations [nomClient], new Billetterie.Model.Common.Seat[] {
+				serviceDeReservation.AddSeatsToReservation (NoReservation,new Customer(nomClient), new Billetterie.Model.Common.Seat[] {
 					new Billetterie.Model.Common.Seat (siege)
 				});
 			}

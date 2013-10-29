@@ -27,7 +27,7 @@ namespace artishowFixture
 			var processor = new Billetterie.Model.Common.NetTotalCalculationStrategy (new Billetterie.Model.Common.Rate[] {
 				new Billetterie.Model.Common.Rate ("tps", _tpsTaux), new Billetterie.Model.Common.Rate ("tvq", _tvqTaux)
 			});
-			var total= processor.Process (new PriceTag(montantBrut));
+			var total= processor.Process (montantBrut);
 			_tps = total.Taxes [0].Amount;
 			_tvq = total.Taxes [1].Amount;
 

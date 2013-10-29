@@ -24,7 +24,7 @@ namespace artishowFixture
 //			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
 //			new Show (), new Customer (nomClient));
 
-			CreateNewOrAddToReservation ("anysiege", nomClient, "anySpectacle", noReservation);
+			CreateNewOrAddToReservation ("anysiege", nomClient, "anySpectacle", new ReservationNumber(noReservation));
 
 		}
 

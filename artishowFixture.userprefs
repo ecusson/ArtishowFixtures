@@ -1,20 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DefinirBancsMorts.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testFixture/Test.cs">
     <Files>
-      <File FileName="EnleverBilletDansReservation.cs" Line="1" Column="1" />
-      <File FileName="AnnuletBilletsDansReservation.cs" Line="41" Column="53" />
-      <File FileName="AjouterPlusieursSiegesDansReservation.cs" Line="69" Column="18" />
-      <File FileName="ReservationFixtureBase.cs" Line="11" Column="1" />
-      <File FileName="DefinirBancsMorts.cs" Line="36" Column="18" />
+      <File FileName="UneRepresentationParReservation.cs" Line="1" Column="1" />
+      <File FileName="AjouterPlusieursSiegesDansReservation.cs" Line="58" Column="4" />
+      <File FileName="testFixture/Test.cs" Line="13" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="artishowFixture" expanded="True">
-            <Node name="DefinirBancsMorts.cs" selected="True" />
-          </Node>
+          <Node name="testFixture" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -22,6 +18,9 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

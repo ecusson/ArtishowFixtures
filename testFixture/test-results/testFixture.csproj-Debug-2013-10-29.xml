@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:49:23</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:50:10</TestDate>
+      <Status>Failure</Status>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Unix transport error.</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.UnixMessageIO.ReceiveMessageStatus (System.IO.Stream networkStream, System.Byte[] buffer) [0x0000f] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixMessageIO.cs:59 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x0004f] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:176 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:51:23</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:52:04</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:53:28</TestDate>
+      <Status />
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test réussi
+
+Durée d'exécution : 0,18 ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-10-29T15:55:36</TestDate>
+      <Status />
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test réussi
+
+Durée d'exécution : 0,18 ms</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="testFixture">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2013-10-29T15:49:23</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-10-29T15:51:23</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-10-29T15:52:04</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-10-29T15:53:28</TestDate>
+          <Status />
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test réussi
+
+Durée d'exécution : 0,17 ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-10-29T15:55:36</TestDate>
+          <Status />
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test réussi
+
+Durée d'exécution : 0,17 ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Test">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-10-29T15:49:23</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-10-29T15:51:23</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-10-29T15:52:04</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-10-29T15:53:28</TestDate>
+              <Status />
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test réussi
+
+Durée d'exécution : 0,17 ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-10-29T15:55:36</TestDate>
+              <Status />
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test réussi
+
+Durée d'exécution : 0,17 ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:49:23</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.InvalidOperationException : Seats requested are not available.</Message>
+                  <StackTrace>  at Billetterie.Model.Reservations.Services.ReservationService.ReserveSeatsForVenue (Billetterie.Model.Common.Seat[] seats, Billetterie.Model.Common.Show show, Billetterie.Model.Common.Customer customer) [0x00000] in &lt;filename unknown&gt;:0 
+  at artishowFixture.AjouterPlusieursSiegesDansReservation.ReserverBilletPourClient (System.String siege, System.String nomClient) [0x00040] in /Users/mabehec/Documents/ArtishowFixtures/AjouterPlusieursSiegesDansReservation.cs:34 
+  at testFixture.Test.TestCase () [0x00012] in /Users/mabehec/Documents/ArtishowFixtures/testFixture/Test.cs:15 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/corlib/System.Reflection/MonoMethod.cs:230 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:50:10</TestDate>
+                  <Status>Failure</Status>
+                  <Passed>0</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Unix transport error.</Message>
+                  <StackTrace>  at Mono.Remoting.Channels.Unix.UnixMessageIO.ReceiveMessageStatus (System.IO.Stream networkStream, System.Byte[] buffer) [0x0000f] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixMessageIO.cs:59 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x0004f] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:176 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:51:23</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.InvalidOperationException : Seats requested are not available.</Message>
+                  <StackTrace>  at Billetterie.Model.Reservations.Services.ReservationService.ReserveSeatsForVenue (Billetterie.Model.Common.Seat[] seats, Billetterie.Model.Common.Show show, Billetterie.Model.Common.Customer customer) [0x00000] in &lt;filename unknown&gt;:0 
+  at artishowFixture.AjouterPlusieursSiegesDansReservation.ReserverBilletPourClient (System.String siege, System.String nomClient) [0x00040] in /Users/mabehec/Documents/ArtishowFixtures/AjouterPlusieursSiegesDansReservation.cs:34 
+  at testFixture.Test.TestCase () [0x00012] in /Users/mabehec/Documents/ArtishowFixtures/testFixture/Test.cs:15 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/corlib/System.Reflection/MonoMethod.cs:230 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:52:04</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.InvalidOperationException : Seats requested are not available.</Message>
+                  <StackTrace>  at Billetterie.Model.Reservations.Services.ReservationService.ReserveSeatsForVenue (Billetterie.Model.Common.Seat[] seats, Billetterie.Model.Common.Show show, Billetterie.Model.Common.Customer customer) [0x00000] in &lt;filename unknown&gt;:0 
+  at artishowFixture.AjouterPlusieursSiegesDansReservation.ReserverBilletPourClient (System.String siege, System.String nomClient) [0x00040] in /Users/mabehec/Documents/ArtishowFixtures/AjouterPlusieursSiegesDansReservation.cs:34 
+  at testFixture.Test.TestCase () [0x00012] in /Users/mabehec/Documents/ArtishowFixtures/testFixture/Test.cs:15 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/corlib/System.Reflection/MonoMethod.cs:230 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:53:28</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test réussi
+
+Durée d'exécution : 0,16 ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-10-29T15:55:36</TestDate>
+                  <Status />
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test réussi
+
+Durée d'exécution : 0,16 ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

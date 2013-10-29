@@ -13,7 +13,7 @@ namespace artishowFixture
 	public class AjouterPlusieursSiegesDansReservation : ReservationFixtureBase
 	{
 
-		ReservationId currentReservation = null;
+		ReservationNumber currentReservation=null;
 
 		public AjouterPlusieursSiegesDansReservation () :base()
 		{
@@ -35,7 +35,7 @@ namespace artishowFixture
 				                                                                new Show (), new Customer (nomClient));
 			} else {
 
-				serviceDeReservation.AddSeatsToReservation (currentReservation, new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) });
+				serviceDeReservation.AddSeatsToReservation (currentReservation, new Customer(nomClient), new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) });
 			}
 
 		}
@@ -43,17 +43,10 @@ namespace artishowFixture
 
 		public bool ReservationPourContientBillet(string nomClient, string siege)
 		{
-			var reservation= reservationRepository.Get (currentReservation.Id);
+		
+			return reservationRepository.Exists (sr=>sr.SeatReservations.Exists(seatR=>seatR.Customer.Id==nomClient && seatR.Seat.Number==siege));
 
-			if (reservation.Customer.Id != nomClient) {
-				return false;
-			}
-			if (reservation.Seats.Contains(new Billetterie.Model.Reservations.Seat(siege)))
-			    {
-				return true;
-			}
 
-			return false;
 		}
 
 		public long InventaireCount()

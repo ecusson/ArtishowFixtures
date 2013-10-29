@@ -28,7 +28,7 @@ namespace artishowFixture
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
 			try{
-				CreateNewOrAddToReservation (siege, nomClient, spectacle, "any");
+				CreateNewOrAddToReservation (siege, nomClient, spectacle,new ReservationNumber( "any"));
 				return true;
 			}
 			catch{return false;}
