@@ -16,11 +16,38 @@ namespace artishowFixture
 	{
 
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
-		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservation,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservation,string>();
+		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		protected IInventoryControlService inventoryservices;
-		protected Dictionary<string,ReservationNumber> currentReservations = new Dictionary<string, ReservationNumber>();
+		protected IDateTimeService dateTimeService = new SystemDateTimeService();
 		protected DateTime SHOW_DATE=DateTime.Now;
+
+		protected Dictionary<string, ShowReservations> showReservationsDictionary = new Dictionary<string, ShowReservations> ();
+		protected string CurrentShowMnemonic;
+
+		protected void SetActiveShow (string mnemonic)
+		{
+			var showReservations = new ShowReservations (new Show (mnemonic, new Venue ("VENUE"), dateTimeService.GetDateTime ()));
+			reservationRepository.Add (showReservations);
+			CurrentShowMnemonic = mnemonic;
+			showReservationsDictionary.Add (mnemonic, showReservations);
+		}
+
+		protected void AddSeatToInventory(string mnemonic)
+		{
+			inventory.Add(new SeatInventoryItem(new Seat(mnemonic),GetActiveShow()));
+		}
+
+		protected SeatInventoryItem GetSeatFromInventory(string mnemonic)
+		{
+		  return 	inventory.Find(s=>s.Seat.Number==mnemonic && s.Show.Equals(GetActiveShow()));
+		}
+
+		protected Show GetActiveShow()
+		{
+			return showReservationsDictionary [CurrentShowMnemonic].Show;
+		}
+
 
 		public ReservationFixtureBase ()
 		{
@@ -30,27 +57,21 @@ namespace artishowFixture
 
 		}
 
+
+
 		protected virtual void InitializeInventoryServices(int timeout)
 		{
 
-			inventoryservices = new InventoryService(lockinventory,inventory, new SystemDateTimeService (),timeout);
+			inventoryservices = new InventoryService(lockinventory,inventory, dateTimeService,timeout);
 		}
 
-		protected	void CreateNewOrAddToReservation (string siege, string nomClient, string spectacle, ReservationNumber NoReservation)
+		protected	void ReserveSeat (string siege, string nomClient, ReservationNumber NoReservation)
 		{
-		
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
 
-			if (!currentReservations.ContainsKey (spectacle)) {
-				currentReservations.Add (spectacle, serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] {
-					new Billetterie.Model.Common.Seat (siege)
-				}, new Show (new Venue (spectacle), SHOW_DATE), new Customer (nomClient)));
-			}
-			else {
-				serviceDeReservation.AddSeatsToReservation (NoReservation,new Customer(nomClient), new Billetterie.Model.Common.Seat[] {
-					new Billetterie.Model.Common.Seat (siege)
-				});
-			}
+	
+			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+			serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow (), new Customer (nomClient)); 
+
 		}
 	}
 }

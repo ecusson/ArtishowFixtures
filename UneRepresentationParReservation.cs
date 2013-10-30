@@ -22,13 +22,14 @@ namespace artishowFixture
 
 		public void GenererInventairePourSpectacle(string siege, string spectacle)
 		{
-			inventory.Add (new SeatInventoryItem (new Billetterie.Model.Common.Seat (siege), new Show (new Venue(spectacle),SHOW_DATE)));
+			this.SetActiveShow (spectacle);
+			this.AddSeatToInventory (siege);
 		}
 
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
 			try{
-				CreateNewOrAddToReservation (siege, nomClient, spectacle,new ReservationNumber( "any"));
+				this.ReserveSeat (siege, nomClient,new ReservationNumber( "any"));
 				return true;
 			}
 			catch{return false;}

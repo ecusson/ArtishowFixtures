@@ -15,7 +15,7 @@ namespace artishowFixture
 		public AjouterPlusieursFraisServiceSurBillet () :base()
 
 		{
-
+			this.SetActiveShow ("SHOW");
 		}
 
 		public void CreerReservationAuNomDe(string noReservation, string nomClient)
@@ -24,7 +24,7 @@ namespace artishowFixture
 //			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
 //			new Show (), new Customer (nomClient));
 
-			CreateNewOrAddToReservation ("anysiege", nomClient, "anySpectacle", new ReservationNumber(noReservation));
+			this.ReserveSeat("anysiege", nomClient, new ReservationNumber(noReservation));
 
 		}
 

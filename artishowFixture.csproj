@@ -32,13 +32,13 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="BilletterieModel">
-      <HintPath>bin\Debug\billetteriemodel.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpRepository.Repository">
-      <HintPath>..\..\Desktop\sharprepository.repository.dll</HintPath>
+      <HintPath>lib\billetteriemodel.dll</HintPath>
     </Reference>
     <Reference Include="SharpRepository.InMemoryRepository">
-      <HintPath>..\..\Desktop\sharprepository.inmemoryrepository.dll</HintPath>
+      <HintPath>lib\sharprepository.inmemoryrepository.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpRepository.Repository">
+      <HintPath>lib\sharprepository.repository.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

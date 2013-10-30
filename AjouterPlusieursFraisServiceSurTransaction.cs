@@ -19,9 +19,7 @@ namespace artishowFixture
 
 		public void CreerReservationAuNomDeAvecTotalDe(string noReservation, string nomClient, decimal total)
 		{
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
-			new Show (), new Customer (nomClient));
+		
 
 		}
 

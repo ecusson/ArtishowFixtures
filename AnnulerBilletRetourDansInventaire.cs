@@ -29,7 +29,7 @@ namespace artishowFixture
 		public void confirmerBilletPourClientNoReservation(string siege, string client,string noReservation)
 		{
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
+			serviceDeReservation.ReserveSeats (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
 			new Show (), new Customer (client));
 
 		}

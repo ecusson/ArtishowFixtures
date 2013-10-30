@@ -24,13 +24,15 @@ namespace artishowFixture
 
 		public void GenererInventairePourSpectacle(string siege, string spectacle)
 		{
-			inventory.Add (new SeatInventoryItem (new Billetterie.Model.Common.Seat (siege), new Show (new Venue(spectacle),SHOW_DATE)));
+			this.SetActiveShow (spectacle);
+			this.AddSeatToInventory (siege);
 		}
 
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
 			try{
-				CreateNewOrAddToReservation (siege, nomClient, spectacle, new ReservationNumber("Any"));
+				this.SetActiveShow (spectacle);
+				this.ReserveSeat(siege, nomClient,new ReservationNumber("Any"));
 				return true;
 			}
 			catch{return false;}
@@ -44,10 +46,8 @@ namespace artishowFixture
 
 		public bool inventaireContientPasPourSpectacle(string siege, string spectacle)
 		{
-			if (inventory.Find (s => s.Seat.Number == siege && s.Show.Venue.Name==spectacle) != null) {
-				return false;
-			} else {
-				return true;}
+			this.SetActiveShow (spectacle);
+			return this.GetSeatFromInventory (siege)==null;
 
 		}
 

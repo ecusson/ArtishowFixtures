@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>12.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9608F5E8-F4CA-4A16-B0D7-87FD68C2BE79}</ProjectGuid>
+    <ProjectGuid>{5C835FBB-EBC2-400B-81A7-FF830B0D4E6B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>testFixture</RootNamespace>
-    <AssemblyName>testFixture</AssemblyName>
+    <RootNamespace>artishowFixturesUT</RootNamespace>
+    <AssemblyName>artishowFixturesUT</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

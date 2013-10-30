@@ -16,26 +16,28 @@ namespace artishowFixture
 
 		public RetirerBilletInventaire ():base()
 		{
+			this.SetActiveShow ("SHOW1");
 		}
 
 		public void GenererInventaire(string siege)
 		{
-			inventory.Add (new SeatInventoryItem (new Billetterie.Model.Common.Seat (siege), new Show ()));
+			this.AddSeatToInventory (siege);
 		}
 
 		public void confirmerbilletPourClient(string siege, string nomClient)
 		{
 
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
-			new Show (), new Customer (nomClient));
+			serviceDeReservation.ReserveSeats (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat (siege) }, 
+			this.GetActiveShow(), new Customer (nomClient));
 
 
 		}
 
 		public bool BilletDansInventaire(string siege)
 		{
-			return true;
+			var seat = this.GetSeatFromInventory (siege);
+			return (seat != null);
 		}
 	}
 }
