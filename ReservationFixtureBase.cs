@@ -28,9 +28,11 @@ namespace artishowFixture
 		protected void SetActiveShow (string mnemonic)
 		{
 			var showReservations = new ShowReservations (new Show (mnemonic, new Venue ("VENUE"), dateTimeService.GetDateTime ()));
-			reservationRepository.Add (showReservations);
+			if (!showReservationsDictionary.ContainsKey (mnemonic)) {
+				reservationRepository.Add (showReservations);
+				showReservationsDictionary.Add (mnemonic, showReservations);
+			}
 			CurrentShowMnemonic = mnemonic;
-			showReservationsDictionary.Add (mnemonic, showReservations);
 		}
 
 		protected void AddSeatToInventory(string mnemonic)

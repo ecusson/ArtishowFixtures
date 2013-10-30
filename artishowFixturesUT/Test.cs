@@ -23,6 +23,19 @@ namespace artishowFixturesUT
 			Assert.IsTrue(test.inventaireContientPas ("A3"));
 
 		}
+		[Test ()]
+		public void TestCase2 ()
+		{
+
+			var test = new ReserverDifferentsBilletsDansRepresentation ();
+			test.GenererInventairePourSpectacle("A1","SHOW1");
+			test.GenererInventairePourSpectacle ("A2", "SHOW1");
+			test.GenererInventairePourSpectacle ("A1", "SHOW2");
+			test.ReserverBilletPourClientEtSpectacle ("A1", "CLIENT1", "SHOW1");
+			test.ReserverBilletPourClientEtSpectacle ("A2", "CLIENT2", "SHOW1");
+			Assert.AreEqual(0, test.InventaireCount ("SHOW1"));
+
+		}
 	}
 }
 
