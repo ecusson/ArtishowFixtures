@@ -1,0 +1,10 @@
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/artishowFixturesUT.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/artishowFixturesUT.dll
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/obj/Debug/artishowFixturesUT.dll
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/obj/Debug/artishowFixturesUT.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/artishowFixture.dll
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/artishowFixture.dll.mdb
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/SharpRepository.InMemoryRepository.dll
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/BilletterieModel.dll
+/Users/mabehec/Documents/ArtishowFixtures/artishowFixturesUT/bin/Debug/SharpRepository.Repository.dll

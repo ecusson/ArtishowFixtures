@@ -1,16 +1,14 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="testFixture/Test.cs">
-    <Files>
-      <File FileName="UneRepresentationParReservation.cs" Line="1" Column="1" />
-      <File FileName="AjouterPlusieursSiegesDansReservation.cs" Line="58" Column="4" />
-      <File FileName="testFixture/Test.cs" Line="13" Column="25" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="testFixture" expanded="True" selected="True" />
+          <Node name="artishowFixture" expanded="True">
+            <Node name="References" expanded="True" selected="True" />
+          </Node>
+          <Node name="testFixture" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
