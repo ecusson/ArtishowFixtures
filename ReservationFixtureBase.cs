@@ -7,6 +7,7 @@ using SharpRepository.Repository;
 using Billetterie.Model.Reservations.Services;
 using Billetterie.Model.Reservations;
 using System.Collections.Generic;
+using Billetterie.Model.Common.Events;
 
 
 
@@ -20,19 +21,21 @@ namespace artishowFixture
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		protected IInventoryControlService inventoryservices;
 		protected IDateTimeService dateTimeService = new SystemDateTimeService();
-		protected DateTime SHOW_DATE=DateTime.Now;
+		protected DateTime SHOW_DATE;
 
-		protected Dictionary<string, ShowReservations> showReservationsDictionary = new Dictionary<string, ShowReservations> ();
+	
 		protected string CurrentShowMnemonic;
 
 		protected void SetActiveShow (string mnemonic)
 		{
-			var showReservations = new ShowReservations (new Show (mnemonic, new Venue ("VENUE"), dateTimeService.GetDateTime ()));
-			if (!showReservationsDictionary.ContainsKey (mnemonic)) {
+            CurrentShowMnemonic = mnemonic;
+            if (reservationRepository.Find(sr=>sr.Show.Name==mnemonic)==null)
+            {
+				var showReservations = new ShowReservations (new Show (mnemonic, new Venue (Guid.NewGuid().ToString()), SHOW_DATE));
 				reservationRepository.Add (showReservations);
-				showReservationsDictionary.Add (mnemonic, showReservations);
 			}
-			CurrentShowMnemonic = mnemonic;
+			
+			
 		}
 
 		protected void AddSeatToInventory(string mnemonic)
@@ -42,19 +45,22 @@ namespace artishowFixture
 
 		protected SeatInventoryItem GetSeatFromInventory(string mnemonic)
 		{
-		  return 	inventory.Find(s=>s.Seat.Number==mnemonic && s.Show.Equals(GetActiveShow()));
+		  return 	inventory.Find(s=>(s.Seat.Number==mnemonic) && (s.Show.Name==GetActiveShow().Name));
 		}
 
 		protected Show GetActiveShow()
 		{
-			return showReservationsDictionary [CurrentShowMnemonic].Show;
+            return reservationRepository.Find(sr => sr.Show.Name == CurrentShowMnemonic).Show;
 		}
 
 
 		public ReservationFixtureBase ()
 		{
-
-
+			DomainEventsPublisher.GetInstance ().Reset ();
+			SHOW_DATE=dateTimeService.GetDateTime();
+			inventory.Dispose ();
+			lockinventory.Dispose ();
+			reservationRepository.Dispose ();
 			InitializeInventoryServices (10000);
 
 		}
@@ -67,14 +73,13 @@ namespace artishowFixture
 			inventoryservices = new InventoryService(lockinventory,inventory, dateTimeService,timeout);
 		}
 
-		protected	void ReserveSeat (string siege, string nomClient, ReservationNumber NoReservation)
+		protected	void ReserveSeat (string siege, string nomClient,  ReservationNumber NoReservation)
 		{
 
 	
 			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow (), new Customer (nomClient)); 
+			serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow(), new Customer (nomClient)); 
 
 		}
 	}
 }
-

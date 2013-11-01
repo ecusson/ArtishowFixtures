@@ -32,18 +32,20 @@ namespace artishowFixture
 
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
-			try{
+			try {
 				this.SetActiveShow (spectacle);
-				this.ReserveSeat(siege, nomClient,new ReservationNumber("123456"));
+				this.ReserveSeat (siege, nomClient, new ReservationNumber ("123456"));
+
 				return true;
+			} catch {
+
+				return false;
 			}
-			catch{
-				return false;}
 		}
 
 		public long InventaireCount(string spectacle)
 		{
-			return inventory.Count(s=>s.Show.Venue.Name==spectacle);
+			return inventory.Count(s=>s.Show.Name==spectacle);
 		}
 
 		public bool inventaireContientPasPourSpectacle(string siege, string spectacle)
