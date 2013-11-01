@@ -19,24 +19,26 @@ namespace artishowFixture
 
 		public ReserverDifferentsBilletsDansRepresentation () : base()
 		{
-
 		}
 
 		public void GenererInventairePourSpectacle(string siege, string spectacle)
 		{
+
 			this.SetActiveShow (spectacle);
 			this.AddSeatToInventory (siege);
+
+
 		}
 
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
 			try{
 				this.SetActiveShow (spectacle);
-				this.ReserveSeat(siege, nomClient,new ReservationNumber("Any"));
+				this.ReserveSeat(siege, nomClient,new ReservationNumber("123456"));
 				return true;
 			}
-			catch{return false;}
-
+			catch{
+				return false;}
 		}
 
 		public long InventaireCount(string spectacle)

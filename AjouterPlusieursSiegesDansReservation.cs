@@ -18,6 +18,7 @@ namespace artishowFixture
 		public AjouterPlusieursSiegesDansReservation () :base()
 		{
 			this.SetActiveShow ("SHOW");
+	
 		}
 
 		public void GenererInventaire(string siege)
