@@ -17,25 +17,7 @@ namespace artishowFixture
 		{
 		}
 
-		public void GenererInventairePourSpectacle(string siege, string spectacle)
-			{
 
-			this.SetActiveShow (spectacle);
-			this.AddSeatToInventory (siege);
-			}
-
-		public bool ReserverBilletPourClientEtSpectacleEtNoReservation(string siege, string nomClient, string spectacle, string noReservation)
-		{
-			try {
-				this.SetActiveShow (spectacle);
-				this.ReserveSeat (siege, nomClient, new ReservationNumber (noReservation));
-
-				return true;
-			} catch {
-
-				return false;
-			}
-		}
 	}
 }
 

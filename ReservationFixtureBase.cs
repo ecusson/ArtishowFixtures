@@ -43,10 +43,43 @@ namespace artishowFixture
 			inventory.Add(new SeatInventoryItem(new Seat(siege,new PriceTag(prix)),GetActiveShow()));
 		}
 
-		public virtual void GenererInventairePourSpectacle(string siege, string spectacle, decimal prix=0.00m)
+		public virtual void GenererInventairePourSpectacle(string siege, string spectacle)
 		{
 					this.SetActiveShow (spectacle);
 					this.AddSeatToInventory (siege);
+		}
+		public virtual void GenererInventairePourSpectacleEtPrix(string siege, string spectacle, decimal prix)
+		{
+			this.SetActiveShow (spectacle);
+			this.AddSeatToInventory (siege,prix);
+		}
+
+		public virtual void ReserverBilletPourClientEtSpectacleEtNoReservation( string siege, string nomClient, string spectacle, string noReservation)
+		{
+			this.SetActiveShow (spectacle);
+			this.ReserveSeat (siege, nomClient, new ReservationNumber (noReservation));
+		}
+
+		public virtual void AjouterFraisAuMontantDe(string nomFrais, decimal prix)
+		{
+
+		}
+
+		public virtual decimal TotalReservation(string noReservation)
+		{
+			return 0.00m;
+		}
+
+//		public virtual void ReserverBilletPourClientEtSpectacleEtNoReservationAuPrixDe( string siege, string nomClient, string spectacle, string noReservation, decimal prix)
+//		{
+//			this.SetActiveShow (spectacle);
+//			this.ReserveSeat (new Seat(siege,new PriceTag(prix)), nomClient, new ReservationNumber (noReservation));
+//		}
+
+
+//		Method pour compiler
+		public virtual void ReserverBilletPourClientEtSpectacleEtNoReservationAuPrixDe( string siege, string nomClient, string spectacle, string noReservation, decimal prix)
+		{
 		}
 
 		protected SeatInventoryItem GetSeatFromInventory(string mnemonic)

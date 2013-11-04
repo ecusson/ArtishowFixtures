@@ -20,12 +20,6 @@ namespace artishowFixture
 		}
 
 
-		public void GenererInventairePourSpectacle(string siege, string spectacle)
-		{
-			this.SetActiveShow (spectacle);
-			this.AddSeatToInventory (siege);
-		}
-
 		public bool ReserverBilletPourClientEtSpectacle(string siege, string nomClient, string spectacle)
 		{
 			try{

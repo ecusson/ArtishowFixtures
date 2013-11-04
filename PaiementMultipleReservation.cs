@@ -2,23 +2,15 @@ using System;
 
 namespace artishowFixture
 {
-	public class PaiementMultipleReservation
+	public class PaiementMultipleReservation :ReservationFixtureBase
 	{
-		public PaiementMultipleReservation ()
+		public PaiementMultipleReservation ()  :base()
 		{
 		}
-		public void CreerReservationAuNomDeAvecTotalDe(string noReservation, string nomClient, decimal total)
+
+		public decimal TotalReservation(string noReservation)
 		{
-
-		}
-
-		public void CreerCompteDeAvecSoldeDe(string nomClient, decimal solde)
-		{
-
-		}
-		public void SoustrairePaiementDeDuCompteClientDe(decimal montantPaiement, string nomClient)
-		{
-
+			return 0.00m;
 		}
 
 		public void AjouterPaiementDeDansReservation(decimal montantPaiement, string noReservation)
@@ -26,14 +18,9 @@ namespace artishowFixture
 
 		}
 
-		public string ReservationSolde(string noReservation)
+		public decimal ReservationSolde(string noReservation)
 		{
-			return "50";
-		}
-
-		public string CompteClientDeSolde(string nomClient)
-		{
-			return string.Empty;
+			return 0.00m;
 		}
 
 
