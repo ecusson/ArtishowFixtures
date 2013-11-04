@@ -6,4 +6,5 @@
 *.suo
 */obj/*
 */test-results/*
+~/lib/*
 
