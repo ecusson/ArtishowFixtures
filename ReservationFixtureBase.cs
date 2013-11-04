@@ -38,9 +38,15 @@ namespace artishowFixture
 			
 		}
 
-		protected void AddSeatToInventory(string mnemonic)
+		protected void AddSeatToInventory(string siege, decimal prix=0.00m)
 		{
-			inventory.Add(new SeatInventoryItem(new Seat(mnemonic),GetActiveShow()));
+			inventory.Add(new SeatInventoryItem(new Seat(siege,new PriceTag(prix)),GetActiveShow()));
+		}
+
+		public virtual void GenererInventairePourSpectacle(string siege, string spectacle, decimal prix=0.00m)
+		{
+					this.SetActiveShow (spectacle);
+					this.AddSeatToInventory (siege);
 		}
 
 		protected SeatInventoryItem GetSeatFromInventory(string mnemonic)
