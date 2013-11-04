@@ -1,22 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CalculTaxes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ReservationFixtureBase.cs">
     <Files>
-      <File FileName="artishowFixturesUT\Test.cs" Line="1" Column="1" />
-      <File FileName="AjouterPlusieursSiegesDansReservation.cs" Line="1" Column="1" />
-      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="16" Column="74" />
-      <File FileName="ReservationFixtureBase.cs" Line="52" Column="42" />
-      <File FileName="CalculTaxes.cs" Line="31" Column="3" />
-      <File FileName="ExtraireTaxes.cs" Line="21" Column="28" />
-      <File FileName="PaiementMultipleReservation.cs" Line="19" Column="4" />
-      <File FileName="AjouterPlusieursFraisServiceSurReservation.cs" Line="22" Column="4" />
+      <File FileName="ReservationFixtureBase.cs" Line="37" Column="4" />
+      <File FileName="ReservationValide.cs" Line="1" Column="1" />
+      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="1" Column="1" />
+      <File FileName="PaiementMultipleReservation.cs" Line="1" Column="1" />
+      <File FileName="GenererDesReservations.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="artishowFixture" expanded="True">
-            <Node name="References" expanded="True" />
+            <Node name="ReservationFixtureBase.cs" selected="True" />
           </Node>
           <Node name="artishowFixturesUT" expanded="True" />
         </State>
