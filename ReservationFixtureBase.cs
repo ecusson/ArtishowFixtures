@@ -14,9 +14,20 @@ using Billetterie.Model.Common.Events;
 
 namespace artishowFixture
 {
-	private class StubReservationNumbersGenerator : IReservationNumbersGenerator
-
+	public class StubReservationNumbersGenerator : IReservationNumbersGenerator
 	{
+		public Stack<String> ReservationNumbers = new Stack<string>();
+
+
+		#region IReservationNumbersGenerator implementation
+
+		public string GetNext ()
+		{
+			return ReservationNumbers.Pop ();
+		}
+
+		#endregion
+
 
 
 	}
@@ -28,13 +39,15 @@ namespace artishowFixture
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition,String> venueRespository = new SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition, string> ();
-		protected IReservationNumbersGenerator reservationNumbersGenerator;
+		protected StubReservationNumbersGenerator reservationNumbersGenerator = new StubReservationNumbersGenerator();
 		protected IInventoryControlService inventoryservices;
 		protected IDateTimeService dateTimeService = new SystemDateTimeService();
 		protected DateTime SHOW_DATE;
 
 	
 		protected string CurrentShowMnemonic;
+		protected string CurrentCustomer;
+		protected ReservationNumber currentShowReservationNumber;
 
 		protected void SetActiveShow (string mnemonic)
 		{
@@ -43,10 +56,24 @@ namespace artishowFixture
             {
 				var showReservations = new ShowReservations (new Show (mnemonic, new Venue (Guid.NewGuid().ToString()), SHOW_DATE));
 				reservationRepository.Add (showReservations);
+				currentShowReservationNumber = null;
 			}
 			
 			
 		}
+		protected void SetActiveCustomer (string mnemonic)
+		{
+			CurrentCustomer = mnemonic;
+
+
+		}
+
+		protected string GetCurrentCustomer()
+		{
+			return  CurrentCustomer;
+		}
+
+
 
 		protected void AddSeatToInventory(string siege, decimal prix=0.00m)
 		{
@@ -66,13 +93,23 @@ namespace artishowFixture
 
 		public virtual void CreerReservationPourClientEtSpectacle(string noReservation, string nomClient, string spectacle)
 		{
+			reservationNumbersGenerator.ReservationNumbers.Push (noReservation);
+			this.SetActiveShow (spectacle);
+			this.SetActiveCustomer (nomClient);
+
+
 
 		}
 
 		public virtual void AjouterBilletDansReservationAuPrixDe(string siege, string noReservation, decimal prix)
 		{
-
+			if (currentShowReservationNumber == null)
+				this.ReserveSeat (siege, GetCurrentCustomer (), prix);
+			else
+				this.ReserveSeat (siege, GetCurrentCustomer (), noReservation);
 		}
+	
+
 
 
 		public virtual bool ReserverBilletPourClientEtSpectacleEtNoReservation( string siege, string nomClient, string spectacle, string noReservation)
@@ -142,8 +179,8 @@ namespace artishowFixture
 		{
 
 	
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow(), new Customer (nomClient)); 
+			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService (), reservationNumbersGenerator);
+			this.currentShowReservationNumber =	serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow(), new Customer (nomClient)); 
 
 		}
 
@@ -151,21 +188,23 @@ namespace artishowFixture
 		{
 
 
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
-			serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow(), new Customer (nomClient)); 
+			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService (), reservationNumbersGenerator);
+			this.currentShowReservationNumber = serviceDeReservation.ReserveSeats (new [] { new Seat (siege) }, GetActiveShow(), new Customer (nomClient)); 
+
 		}
 
 		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber, decimal prix)
 		{
 
 
-			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService ());
+			var serviceDeReservation = new ReservationService (reservationRepository, inventoryservices, new SystemDateTimeService (),reservationNumbersGenerator);
 			serviceDeReservation.AddSeatsToReservation (new ReservationNumber (reservationNumber), GetActiveShow (), new Customer (nomClient), new [] { new Seat (siege, new PriceTag (prix)) });
 
 		}
 
 		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber)
 		{
+
 
 			this.ReserveSeat (siege, nomClient, reservationNumber,0.00m);
 
