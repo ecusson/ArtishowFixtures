@@ -2,4 +2,8 @@
 /obj
 /bin
 *.userprefs
+*.pdb
+*.suo
+*/obj/*
+*/test-results/*
 
