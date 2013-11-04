@@ -24,7 +24,7 @@ namespace artishowFixture
 //			serviceDeReservation.ReserveSeatsForVenue (new Billetterie.Model.Common.Seat[] { new Billetterie.Model.Common.Seat ("any") }, 
 //			new Show (), new Customer (nomClient));
 
-			this.ReserveSeat("anysiege", nomClient, new ReservationNumber(noReservation));
+			this.ReserveSeat("anysiege", nomClient, noReservation);
 
 		}
 

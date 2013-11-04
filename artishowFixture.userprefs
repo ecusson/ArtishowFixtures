@@ -3,11 +3,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ReservationFixtureBase.cs">
     <Files>
-      <File FileName="ReservationFixtureBase.cs" Line="37" Column="4" />
-      <File FileName="ReservationValide.cs" Line="1" Column="1" />
-      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="1" Column="1" />
-      <File FileName="PaiementMultipleReservation.cs" Line="1" Column="1" />
-      <File FileName="GenererDesReservations.cs" Line="1" Column="1" />
+      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="10" Column="1" />
+      <File FileName="ReservationFixtureBase.cs" Line="63" Column="23" />
+      <File FileName="UnSeulClientParReservation.cs" Line="1" Column="1" />
+      <File FileName="AjouterPlusieursFraisServiceSurBillet.cs" Line="27" Column="17" />
+      <File FileName="UneRepresentationParReservation.cs" Line="26" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +15,6 @@
           <Node name="artishowFixture" expanded="True">
             <Node name="ReservationFixtureBase.cs" selected="True" />
           </Node>
-          <Node name="artishowFixturesUT" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -23,9 +22,6 @@
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
         <State />
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
