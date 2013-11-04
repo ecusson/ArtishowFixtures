@@ -74,6 +74,8 @@
     <Compile Include="EnleverEtAjouterBilletDansReservation.cs" />
     <Compile Include="AnnuletBilletsDansReservation.cs" />
     <Compile Include="DefinirBancsMorts.cs" />
+    <Compile Include="UnSeulClientParReservation.cs" />
+    <Compile Include="UnClientPeutDetenirPlusieursReservations.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

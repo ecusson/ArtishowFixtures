@@ -1,15 +1,22 @@
 using System;
-
+using Billetterie.Model.Common;
+using Billetterie.Model.Common.Services;
+using Billetterie.Model.Inventory.Services;
+using Billetterie.Model.Inventory;
+using SharpRepository.Repository;
+using Billetterie.Model.Reservations.Services;
+using Billetterie.Model.Reservations;
+using System.Collections.Generic;
 namespace artishowFixture
 {
-	public class ReservationValide
+	public class ReservationValide : ReservationFixtureBase
 	{
 		private int nbsieges;
   		private int frais;
   		private int marchandise;
 		private int client;
 		
-		public void reservationValide()
+		public ReservationValide () : base ()
 		{
 
 		}
@@ -37,15 +44,9 @@ namespace artishowFixture
 		public string valide()
 		{
 
-			if (client>0&&(frais>0||marchandise>0||nbsieges>0))
-			{
-				 return "1";	
-				
-			}
-			else
-			{
-				return "0";
-			}
+		
+				return null;
+		
 				 
 		}
 		

@@ -1,14 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AjouterBilletDansReservation.cs">
+    <Files>
+      <File FileName="UnSeulClientParReservation.cs" Line="28" Column="79" />
+      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="44" Column="4" />
+      <File FileName="UnClientPeutDetenirPlusieursReservations.cs" Line="1" Column="1" />
+      <File FileName="ReservationValide.cs" Line="44" Column="10" />
+      <File FileName="AjouterBilletDansReservation.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="artishowFixture" expanded="True">
-            <Node name="References" expanded="True" selected="True" />
+            <Node name="AjouterBilletDansReservation.cs" selected="True" />
           </Node>
-          <Node name="testFixture" expanded="True" />
+          <Node name="artishowFixturesUT" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
