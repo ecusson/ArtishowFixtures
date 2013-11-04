@@ -8,7 +8,7 @@ namespace artishowFixture
 		{
 		}
 
-		public decimal TotalReservation(string noReservation)
+		public override decimal TotalReservation(string noReservation)
 		{
 			return 0.00m;
 		}

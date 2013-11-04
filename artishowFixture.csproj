@@ -31,14 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="BilletterieModel">
-      <HintPath>lib\billetteriemodel.dll</HintPath>
-    </Reference>
     <Reference Include="SharpRepository.InMemoryRepository">
       <HintPath>lib\sharprepository.inmemoryrepository.dll</HintPath>
     </Reference>
     <Reference Include="SharpRepository.Repository">
       <HintPath>lib\sharprepository.repository.dll</HintPath>
+    </Reference>
+    <Reference Include="BilletterieModel">
+      <HintPath>lib\billetteriemodel.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

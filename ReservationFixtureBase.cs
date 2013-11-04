@@ -19,6 +19,7 @@ namespace artishowFixture
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,String> inventory = new SharpRepository.InMemoryRepository.InMemoryRepository<SeatInventoryItem,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
+		protected SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition,String> venueRespository = new SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition, string> ();
 		protected IInventoryControlService inventoryservices;
 		protected IDateTimeService dateTimeService = new SystemDateTimeService();
 		protected DateTime SHOW_DATE;
@@ -109,7 +110,7 @@ namespace artishowFixture
 		protected virtual void InitializeInventoryServices(int timeout)
 		{
 
-			inventoryservices = new InventoryService(lockinventory,inventory, dateTimeService,timeout);
+			inventoryservices = new InventoryService(lockinventory,inventory,venueRespository, dateTimeService,timeout);
 		}
 
 		protected	void ReserveSeat (string siege, string nomClient,  ReservationNumber NoReservation)
