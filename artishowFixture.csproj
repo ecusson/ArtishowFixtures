@@ -75,6 +75,7 @@
     <Compile Include="DefinirBancsMorts.cs" />
     <Compile Include="UnSeulClientParReservation.cs" />
     <Compile Include="UnClientPeutDetenirPlusieursReservations.cs" />
+    <Compile Include="UnSeulNumeroDeReservationParSequence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

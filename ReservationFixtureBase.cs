@@ -58,12 +58,13 @@ namespace artishowFixture
 
 		protected void SetActiveShow (string mnemonic)
 		{
+			currentShowReservationNumber = null;
             CurrentShowMnemonic = mnemonic;
             if (reservationRepository.Find(sr=>sr.Show.Name==mnemonic)==null)
             {
 				var showReservations = new ShowReservations (new Show (mnemonic, new Venue (Guid.NewGuid().ToString()), SHOW_DATE));
 				reservationRepository.Add (showReservations);
-				currentShowReservationNumber = null;
+
 			}
 			
 			
@@ -108,22 +109,37 @@ namespace artishowFixture
 			this.AddSeatToInventory (siege,prix);
 		}
 
-		public virtual void CreerReservationPourClientEtSpectacle(string noReservation, string nomClient, string spectacle)
+		public virtual bool CreerReservationPourClientEtSpectacle(string noReservation, string nomClient, string spectacle)
 		{
+			try
+			{
 			reservationNumbersGenerator.ReservationNumbers.Push (noReservation);
 			this.SetActiveShow (spectacle);
 			this.SetActiveCustomer (nomClient);
-
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
 
 
 		}
 
-		public virtual void AjouterBilletDansReservationAuPrixDe(string siege, string noReservation, decimal prix)
+		public virtual bool AjouterBilletDansReservationAuPrixDe(string siege, string noReservation, decimal prix)
 		{
+			try
+			{
 			if (currentShowReservationNumber == null)
 				this.ReserveSeat (siege, GetCurrentCustomer (), prix);
 			else
 				this.ReserveSeat (siege, GetCurrentCustomer (), noReservation);
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
 		}
 	
 

@@ -57,6 +57,19 @@ Durée d'exécution : 3,35 ms</Message>
       <Time />
       <Message>One or more child tests had errors</Message>
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-11-04T16:46:57</TestDate>
+      <Status />
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="Test">
@@ -117,6 +130,19 @@ Durée d'exécution : 3,34 ms</Message>
           <Time />
           <Message>One or more child tests had errors</Message>
         </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-11-04T16:46:57</TestDate>
+          <Status />
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
       </Results>
       <Tests>
         <TestRecord Name="Test">
@@ -166,6 +192,19 @@ Durée d'exécution : 3,34 ms</Message>
             </UnitTestResult>
             <UnitTestResult>
               <TestDate>2013-11-04T16:41:18</TestDate>
+              <Status />
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-11-04T16:46:57</TestDate>
               <Status />
               <Passed>0</Passed>
               <Errors>1</Errors>
@@ -239,6 +278,28 @@ Durée d'exécution : 3,32 ms</Message>
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-11-04T16:41:18</TestDate>
+                  <Status />
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at Billetterie.Model.Reservations.Services.ReservationService.AddSeatsToReservation (Billetterie.Model.Common.ReservationNumber referenceNumber, Billetterie.Model.Common.Show show, Billetterie.Model.Common.Customer customer, Billetterie.Model.Common.Seat[] seats) [0x00000] in &lt;filename unknown&gt;:0 
+  at artishowFixture.ReservationFixtureBase.ReserveSeat (System.String siege, System.String nomClient, System.String reservationNumber, Decimal prix) [0x00047] in /Users/mabehec/Documents/ArtishowFixtures/ReservationFixtureBase.cs:201 
+  at artishowFixture.ReservationFixtureBase.ReserveSeat (System.String siege, System.String nomClient, System.String reservationNumber) [0x0000f] in /Users/mabehec/Documents/ArtishowFixtures/ReservationFixtureBase.cs:209 
+  at artishowFixture.ReservationFixtureBase.AjouterBilletDansReservationAuPrixDe (System.String siege, System.String noReservation, Decimal prix) [0x00028] in /Users/mabehec/Documents/ArtishowFixtures/ReservationFixtureBase.cs:109 
+  at Test.Test.TestCase () [0x00065] in /Users/mabehec/Documents/ArtishowFixtures/Test/Test.cs:18 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00054] in /private/tmp/source/bockbuild-xamarin/profiles/mono-mac-xamarin/build-root/mono-3.2.3/mcs/class/corlib/System.Reflection/MonoMethod.cs:230 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-11-04T16:46:57</TestDate>
                   <Status />
                   <Passed>0</Passed>
                   <Errors>1</Errors>
