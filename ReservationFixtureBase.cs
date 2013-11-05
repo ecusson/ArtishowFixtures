@@ -9,6 +9,7 @@ using Billetterie.Model.Reservation.Services;
 using Billetterie.Model.Reservations;
 using System.Collections.Generic;
 using Billetterie.Model.Common.Events;
+using SharpRepository.InMemoryRepository;
 
 
 
@@ -39,11 +40,17 @@ namespace artishowFixture
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string> reservationRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<ShowReservations,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string> lockinventory = new SharpRepository.InMemoryRepository.InMemoryRepository<InventorySeatLock,string>();
 		protected SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition,String> venueRespository = new SharpRepository.InMemoryRepository.InMemoryRepository<VenueDefinition, string> ();
+		protected SharpRepository.InMemoryRepository.InMemoryRepository<Invoice, String> invoiceRepository = new SharpRepository.InMemoryRepository.InMemoryRepository<Invoice, string>();
+		protected InMemoryRepository<CustomerAccount, String> accountsRepository = new InMemoryRepository<CustomerAccount, string> ();
+
 		protected StubReservationNumbersGenerator reservationNumbersGenerator = new StubReservationNumbersGenerator();
+		protected ITotalCalculationStrategy netCalculationStrategy = new NetTotalCalculationStrategy(new[] { new Rate("TPS", 0.05m), new Rate("TVQ", 0.09975m) });
 		protected IInventoryControlService inventoryservices;
+
 		protected IDateTimeService dateTimeService = new SystemDateTimeService();
 		protected DateTime SHOW_DATE;
 
+		protected InvoicingService invoicingService;
 	
 		protected string CurrentShowMnemonic;
 		protected string CurrentCustomer;
@@ -61,6 +68,16 @@ namespace artishowFixture
 			
 			
 		}
+
+		public decimal GetTotalGrossAmountDueForCustomer()
+		{
+			return invoicingService.GetAmountsDueForCustomer (new Customer(this.GetCurrentCustomer ())).InvoiceGrossTotal;
+		}
+		public decimal GetTotalNetAmountDueForCustomer()
+		{
+			return invoicingService.GetAmountsDueForCustomer (new Customer(this.GetCurrentCustomer ())).InvoiceNetTotal;
+		}
+
 		protected void SetActiveCustomer (string mnemonic)
 		{
 			CurrentCustomer = mnemonic;
@@ -164,6 +181,8 @@ namespace artishowFixture
 			lockinventory.Dispose ();
 			reservationRepository.Dispose ();
 			InitializeInventoryServices (10000);
+			 invoicingService = new InvoicingService (accountsRepository,invoiceRepository,netCalculationStrategy,dateTimeService);
+
 
 		}
 

@@ -17,7 +17,7 @@ namespace Test
 			fixture.AjouterBilletDansReservationAuPrixDe ("A1", "No1", 10);
 			fixture.AjouterBilletDansReservationAuPrixDe ("A2", "No1", 10);
 
-
+			var totalGrossDueForCustomer = fixture.GetTotalGrossAmountDueForCustomer ();
 
 
 		}
