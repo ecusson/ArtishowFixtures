@@ -1,7 +1,6 @@
 using System;
 using Billetterie.Model.Common;
 using Billetterie.Model.Common.Services;
-using Billetterie.Model.Inventory.Services;
 using Billetterie.Model.Inventory;
 using SharpRepository.Repository;
 using Billetterie.Model.Reservations.Services;
@@ -24,7 +23,7 @@ namespace artishowFixture
 
 		public long InventaireCount(string spectacle)
 		{
-			return inventory.Count(s=>s.Show.Name==spectacle);
+			return seatRepository.Count(s=>s.Show.Name==spectacle);
 		}
 
 		public bool inventaireContientPasPourSpectacle(string siege, string spectacle)
@@ -35,7 +34,7 @@ namespace artishowFixture
 		}
 
 
-
+	
 
 
 	}
