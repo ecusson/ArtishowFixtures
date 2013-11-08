@@ -55,8 +55,8 @@ namespace artishowFixture
 		{
 
 			for (int i=1; i<=nombre; i++) {
-				this.AddSeatToInventory (categorie+i.ToString (),prix);
-				this.ReserveSeat (categorie+i.ToString (), this.GetCurrentCustomer());
+				this.AddSeatToInventory (categorie+i.ToString (),0.00m,categorie,prix);
+				this.ReserveSeatWithCategory(categorie+i.ToString (), this.GetCurrentCustomer(), categorie);
 
 
 			}
