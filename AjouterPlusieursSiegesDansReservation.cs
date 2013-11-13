@@ -29,7 +29,7 @@ namespace artishowFixture
 		public long InventaireCount()
 		{
 			this.SetActiveShow ("SHOW");
-			return seatReservationsRepository.LongCount ();
+			return this.seatRepository.LongCount ();
 		}
 
 		public bool inventaireContientPas(string siege)

@@ -36,7 +36,9 @@ namespace artishowFixture
 
 		public void AjouterClient(string any)
 		{
-			this.SetActiveCustomer (any);
+
+			this.CreerReservationPourClientEtSpectacle (DEFAULT_RESERVATIONNUMBER, any, this.GetActiveShow ().Name);
+
 		}
          public void AjouterSiegesAuPrixBrutDeEtAvecRabaisDePourLaCategorie(int nombre,decimal prix, decimal rabais, string categorie)
 		{
@@ -44,7 +46,7 @@ namespace artishowFixture
 
 			for (int i=1; i<=nombre; i++) {
 				this.AddSeatToInventory (categorie+i.ToString (),rabais,categorie,prix);
-				this.ReserveSeatWithCategory(categorie+i.ToString (), this.GetCurrentCustomer(), categorie);
+				this.AddSeatsToReservation(categorie+i.ToString (), this.GetCurrentCustomer(),DEFAULT_RESERVATIONNUMBER,prix, categorie);
 			
 			
 			}
@@ -56,7 +58,7 @@ namespace artishowFixture
 
 			for (int i=1; i<=nombre; i++) {
 				this.AddSeatToInventory (categorie+i.ToString (),0.00m,categorie,prix);
-				this.ReserveSeatWithCategory(categorie+i.ToString (), this.GetCurrentCustomer(), categorie);
+				this.AddSeatsToReservation(categorie+i.ToString (), this.GetCurrentCustomer(),DEFAULT_RESERVATIONNUMBER,prix, categorie);
 
 
 			}
@@ -68,7 +70,7 @@ namespace artishowFixture
                 for (int i = 1; i <= nombre; i++)
                 {
                     this.AddSeatToInventory(type + i.ToString(),0.00m, type, 0.00m);
-                    this.ReserveSeatWithCategory(type + i.ToString(), this.GetCurrentCustomer(), type);
+					this.AddSeatsToReservation(type+i.ToString (), this.GetCurrentCustomer(),DEFAULT_RESERVATIONNUMBER,prix, type);
 				}
 			}
 			else{

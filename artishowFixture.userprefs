@@ -1,22 +1,20 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <AuthorInfo Name="Eri" Email="ecusson@gmail.com" Copyright="Eri" Company="" Trademark="" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ReservationFixtureBase.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnSeulNumeroDeReservationParSequence.cs">
     <Files>
-      <File FileName="ReserverDifferentsBilletsDansRepresentation.cs" Line="10" Column="1" />
-      <File FileName="ReservationFixtureBase.cs" Line="111" Column="2" />
-      <File FileName="UnSeulClientParReservation.cs" Line="1" Column="1" />
-      <File FileName="AjouterPlusieursFraisServiceSurBillet.cs" Line="27" Column="17" />
-      <File FileName="UneRepresentationParReservation.cs" Line="26" Column="39" />
-      <File FileName="AjouterPlusieursFraisServiceSurTransaction.cs" Line="1" Column="1" />
+      <File FileName="UnSeulNumeroDeReservationParSequence.cs" Line="8" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="artishowFixture" expanded="True">
             <Node name="References" expanded="True" />
+            <Node name="UnSeulNumeroDeReservationParSequence.cs" selected="True" />
           </Node>
-          <Node name="Test" expanded="True" selected="True" />
+          <Node name="Test" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -31,9 +29,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/mabehec/Documents/ArtishowFixtures/ArtishowFixtureTest/Test.cs" line="16" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

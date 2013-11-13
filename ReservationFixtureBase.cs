@@ -15,23 +15,7 @@ using Billetterie.Model.Invoincing;
 
 namespace artishowFixture
 {
-	public class StubReservationNumbersGenerator : IReservationNumbersGenerator
-	{
-		public Stack<String> ReservationNumbers = new Stack<string>();
 
-
-		#region IReservationNumbersGenerator implementation
-
-		public string GetNext ()
-		{
-			return ReservationNumbers.Pop ();
-		}
-
-		#endregion
-
-
-
-	}
 
 	public abstract class ReservationFixtureBase
 	{
@@ -53,7 +37,10 @@ namespace artishowFixture
 		protected Dictionary<string, Show> shows = new Dictionary<string, Show>();
 		protected string CurrentShowMnemonic;
 		protected string CurrentCustomer;
-		protected ReservationNumber currentShowReservationNumber;
+		protected string currentShowReservationNumber=null;
+
+		private const string DEFAULT_CATEGORY = "regulier";
+		protected const string DEFAULT_RESERVATIONNUMBER = "123456";
 
 	 protected	ITotalCalculationStrategy netCalculationStrategy = new NetTotalCalculationStrategy(new Rate[] { new Rate("TPS",  0.05m), 
 			new Rate("TVQ", 0.09975m) });
@@ -61,11 +48,6 @@ namespace artishowFixture
 		protected void SetActiveShow (string mnemonic)
 		{
 			this.SetActiveShow (mnemonic, dateTimeService.GetDateTime ().Date.ToString ("s"), "VENUE123");
-
-
-		
-
-			
 		}
 
 		protected void SetActiveShow (string mnemonic, string date, string venue)
@@ -177,7 +159,8 @@ namespace artishowFixture
 			{
 
 			this.SetActiveShow (spectacle);
-			this.ReserveSeat (siege, nomClient, noReservation);
+				this.CreerReservationPourClientEtSpectacle(noReservation,nomClient,spectacle);
+			    this.ReserveSeat (siege, nomClient, noReservation);
 				return true;
 			}
 			catch
@@ -199,7 +182,7 @@ namespace artishowFixture
 		public virtual void ReserverBilletPourClientEtSpectacleEtNoReservationAuPrixDe( string siege, string nomClient, string spectacle, string noReservation, decimal prix)
 		{
 			this.SetActiveShow (spectacle);
-			this.ReserveSeat (siege, nomClient, noReservation, prix);
+			this.AddSeatsToReservation (siege, nomClient, noReservation, prix);
 		}
 
 
@@ -228,48 +211,69 @@ namespace artishowFixture
 		
 		protected	void ReserveSeat (string siege, string nomClient)
 		{
-
-			this.currentShowReservationNumber= reservationService.ReserveSeats("123",  new [] { new InventorySeat(GetActiveShow(), siege, 0.00m)},new Customer (nomClient),"regulier" );
-
+			this.ReserveSeat (siege, nomClient, 0.00m);
 		}
 
 		protected	void ReserveSeat (string siege, string nomClient, decimal prix)
 		{
 
 
-		
-			this.currentShowReservationNumber= reservationService.ReserveSeats("123",  new [] { new InventorySeat(GetActiveShow(), siege, prix)},new Customer (nomClient),"regulier" );
+			this.ReserveSeat (siege, nomClient, DEFAULT_RESERVATIONNUMBER,prix,DEFAULT_CATEGORY);
+
+
 
 		}
 
-		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber, decimal prix)
+		protected	void AddSeatsToReservation (string siege, string nomClient,  string reservationNumber, decimal prix)
 		{
 
-		var seat =	new InventorySeat (GetActiveShow (), siege, prix);
 
-			reservationService.AddSeatsToReservation( 
-			                                         new ReservationNumber(reservationNumber, new List<InventorySeat>(new []{seat}) ), 
-			                                         new Customer (nomClient), 
-			                                         new [] {seat },"regulier");
+			AddSeatsToReservation (siege, nomClient, reservationNumber, prix, DEFAULT_CATEGORY);
+			                                         
 
 		}
+
+		protected	void AddSeatsToReservation (string siege, string nomClient,  string reservationNumber, decimal prix, string category)
+		{
+
+
+			this.currentShowReservationNumber = reservationNumber;
+			var seat =	new InventorySeat (GetActiveShow (), siege, prix);
+			reservationService.AddSeatsToReservation (reservationNumber, new Customer (nomClient), new []{ seat }, category);
+
+
+		}
+
 
 		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber)
 		{
 
+			this.ReserveSeat (siege, nomClient, reservationNumber, 0.00m, DEFAULT_CATEGORY);
 
-			this.ReserveSeat (siege, nomClient, reservationNumber,0.00m);
+
+		}
+		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber, decimal prix)
+		{
+
+			this.ReserveSeat (siege, nomClient, reservationNumber, prix, DEFAULT_CATEGORY);
+		
+
+		}
+
+		protected	void ReserveSeat (string siege, string nomClient,  string reservationNumber, decimal prix, string category)
+		{
+
+		
+
+			reservationService.AddSeatsToReservation (reservationNumber, new Customer (nomClient), new [] { new InventorySeat (GetActiveShow (), siege, prix) }, category); 
 
 
 		}
 
+
         protected void ReserveSeatWithCategory(string siege, string nomClient, string categorie)
         {
-            var seat = new InventorySeat(GetActiveShow(), siege, 0.00m);
-
-            this.currentShowReservationNumber=reservationService.ReserveSeats("123",new[] { seat },
-                                                     new Customer(nomClient), categorie);
-
+			this.ReserveSeat (siege, nomClient, DEFAULT_RESERVATIONNUMBER, 0.00m, categorie);
         }
 
 		public virtual bool CreerReservationPourClientEtSpectacle(string noReservation, string nomClient, string spectacle)
@@ -279,6 +283,7 @@ namespace artishowFixture
 			
 				this.SetActiveShow (spectacle);
 				this.SetActiveCustomer (nomClient);
+				this.currentShowReservationNumber= reservationService.CreateReservation(noReservation,new Customer(nomClient),GetActiveShow());
 				return true;
 			}
 			catch
